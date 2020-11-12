@@ -134,6 +134,7 @@ func check_game_over():
 func reset():
 	snake_body = [Vector2(5, 10), Vector2(4, 10), Vector2(3, 10)]
 	snake_direction = Vector2(1,0)
+	get_tree().call_group('ScoreGroup', 'reset_score')
 
 func _on_SnakeTick_timeout():
 	move_snake()

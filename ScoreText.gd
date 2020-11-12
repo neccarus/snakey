@@ -8,6 +8,9 @@ func _ready():
 
 func update_score(snake_length):
 	$ScoreText.text = str(snake_length - 2)
+	
+func reset_score():
+	$ScoreText.text = str(0)
 
 func _draw():
 	var score_width = $Apple.get_rect().size.x + $ScoreText.get_rect().size.x - 16
